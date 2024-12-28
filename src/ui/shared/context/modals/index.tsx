@@ -1,22 +1,21 @@
+/* eslint-disable prettier/prettier */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { createElement } from 'react';
 import { useModals } from './context';
+import Sign from '../../modals/sign';
 
-export type ModalIds = 'sign-in' | 'sign-up';
+export type ModalIds = 'sign';
 
 const ListModals: Record<ModalIds, any> = {
-  'sign-in': <></>,
-  'sign-up': <></>,
+  sign: Sign,
 };
 
 const Modals = () => {
-  const { modalId, modals, data } = useModals((state) => state);
+  const { modalId, data } = useModals((state) => state);
 
-  if (!modalId || !modals.length) return;
+  if (!modalId) return;
 
-  for (const modal in modals) {
-    return createElement(ListModals[modal as ModalIds], data);
-  }
+  return createElement(ListModals[modalId], data);
 };
 
 export default Modals;

@@ -16,10 +16,11 @@ export const useModals = create<useModalsProps>((set) => ({
   modalId: null,
   data: {} as any,
   modals: [],
+  closeAll: () => set({ modalId: null, modals: [], data: {} }),
   open: (modalId: ModalIds, data?: any) =>
     set((props) => {
       props.modals.push(modalId);
-      return { modalId, data };
+      return { modalId, modals: props.modals, data };
     }),
   close: (modalId?: ModalIds) =>
     set((props) => {
@@ -31,7 +32,6 @@ export const useModals = create<useModalsProps>((set) => ({
       props.modals.pop();
       return { modals: props.modals };
     }),
-  closeAll: () => set({ modalId: null, modals: [], data: {} }),
   goTo: (modalId: ModalIds, data?: any) =>
     set((props) => {
       if (props.modalId === modalId) return {};

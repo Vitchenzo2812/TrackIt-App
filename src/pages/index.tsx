@@ -1,5 +1,19 @@
+import { useModals } from '@/ui/shared/context/modals/context';
+
 const App = () => {
-  return <h1>Hello World</h1>;
+  const { open, modalId } = useModals((state) => state);
+
+  return (
+    !modalId && (
+      <button
+        onClick={() => {
+          open('sign', { type: 'sign-in' });
+        }}
+      >
+        Abrir modal
+      </button>
+    )
+  );
 };
 
 export default App;

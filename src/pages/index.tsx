@@ -7,7 +7,7 @@ const App = () => {
     !modalId && (
       <button
         onClick={() => {
-          open('sign', { type: 'sign-up' });
+          open('verification-code');
         }}
       >
         Abrir modal

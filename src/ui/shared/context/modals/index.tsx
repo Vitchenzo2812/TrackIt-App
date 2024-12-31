@@ -3,11 +3,13 @@
 import { createElement } from 'react';
 import { useModals } from './context';
 import Sign from '../../modals/sign';
+import VerificationCodeModal from '../../modals/verification-code';
 
-export type ModalIds = 'sign';
+export type ModalIds = 'sign' | 'verification-code';
 
 const ListModals: Record<ModalIds, any> = {
   sign: Sign,
+  'verification-code': VerificationCodeModal,
 };
 
 const Modals = () => {

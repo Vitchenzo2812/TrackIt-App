@@ -23,6 +23,7 @@ export const WrapperFirstSection = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 2.6rem;
+  padding-bottom: 3.6rem;
 `;
 
 export const WrapperFirstSectionTexts = styled.div`

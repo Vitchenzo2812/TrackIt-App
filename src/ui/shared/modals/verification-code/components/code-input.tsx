@@ -1,7 +1,13 @@
 import { createRef, useEffect } from 'react';
 import * as S from './styled';
+import { VerificationCodeType } from '../styled';
+import React from 'react';
 
-const CodeInput = () => {
+interface Props {
+  variant?: VerificationCodeType;
+}
+
+const CodeInput = ({ variant }: Props) => {
   const refs = Array.from({ length: 6 }).map(() =>
     createRef<HTMLInputElement>()
   );
@@ -18,6 +24,7 @@ const CodeInput = () => {
         <S.InputNumber
           key={index}
           ref={ref}
+          variant={variant}
           placeholder="0"
           type="text"
           maxLength={1}
@@ -50,4 +57,4 @@ const CodeInput = () => {
   );
 };
 
-export default CodeInput;
+export default React.memo(CodeInput);

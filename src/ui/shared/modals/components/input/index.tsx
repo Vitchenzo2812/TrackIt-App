@@ -7,7 +7,7 @@ interface Props {
   rightIcon?: ReactElement;
 }
 
-const SignInput = ({ placeholder, leftIcon, rightIcon }: Props) => {
+const ModalInput = ({ placeholder, leftIcon, rightIcon }: Props) => {
   return (
     <S.Container>
       {leftIcon}
@@ -17,4 +17,4 @@ const SignInput = ({ placeholder, leftIcon, rightIcon }: Props) => {
   );
 };
 
-export default SignInput;
+export default ModalInput;

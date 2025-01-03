@@ -1,8 +1,10 @@
 import EmailIcon from '@/ui/icons/email';
-import SignInput from '../components/input';
+import ModalInput from '../../components/input';
 import * as S from './styled';
 import PasswordIcon from '@/ui/icons/password';
 import ClosedEyeIcon from '@/ui/icons/closed-eye';
+import Typography from '@/ui/shared/atoms/typography';
+import { poppins, sourceSans } from '@/styles/global';
 
 const SignIn = () => {
   return (
@@ -13,10 +15,21 @@ const SignIn = () => {
     >
       <S.WrapperFirstSection>
         <S.WrapperFirstSectionTexts>
-          <S.Title>Bem-vindo de volta ao ITrackIt!</S.Title>
-          <S.Description>
+          <Typography
+            size={2.5}
+            fontFamily={poppins.style.fontFamily}
+            weight={700}
+            color="#2e2e2e"
+          >
+            Bem-vindo de volta ao ITrackIt!
+          </Typography>
+          <Typography
+            size={2.2}
+            fontFamily={sourceSans.style.fontFamily}
+            weight={400}
+          >
             Hora de retomar o controle da sua rotina.
-          </S.Description>
+          </Typography>
         </S.WrapperFirstSectionTexts>
 
         <S.Line />
@@ -34,18 +47,28 @@ const SignIn = () => {
       </S.WrapperSignUpTexts>
 
       <S.WrapperEmailInput>
-        <S.TitleInput>Email</S.TitleInput>
-        <SignInput placeholder="endereço de email" leftIcon={<EmailIcon />} />
+        <Typography size={1.8} color="#2e2e2e" weight={600}>
+          Email
+        </Typography>
+        <ModalInput placeholder="endereço de email" leftIcon={<EmailIcon />} />
       </S.WrapperEmailInput>
 
       <S.WrapperPasswordInput>
-        <S.TitleInput>Senha</S.TitleInput>
-        <SignInput
+        <Typography size={1.8} color="#2e2e2e" weight={600}>
+          Senha
+        </Typography>
+        <ModalInput
           placeholder=""
           leftIcon={<PasswordIcon />}
           rightIcon={<ClosedEyeIcon />}
         />
-        <S.ForgetPasswordText>Esqueceu sua senha?</S.ForgetPasswordText>
+        <S.ForgetPasswordText>
+          Esqueceu sua senha?
+          <S.ForgetPasswordText color="#229C7C">
+            {' '}
+            Clique aqui
+          </S.ForgetPasswordText>
+        </S.ForgetPasswordText>
       </S.WrapperPasswordInput>
 
       <S.ContainerSubmitButton>

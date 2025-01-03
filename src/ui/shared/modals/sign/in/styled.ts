@@ -1,4 +1,4 @@
-import { poppins, sourceSans } from '@/styles/global';
+import { sourceSans } from '@/styles/global';
 import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
@@ -32,26 +32,10 @@ export const WrapperFirstSectionTexts = styled.div`
   align-items: center;
 `;
 
-export const Title = styled.h1`
-  text-align: center;
-  font-size: 2.5rem;
-  font-family: ${poppins.style.fontFamily}, sans-serif;
-  font-weight: 700;
-  color: #2e2e2e;
-`;
-
-export const Description = styled.span`
-  font-family: ${sourceSans.style.fontFamily}, sans-serif;
-  text-align: center;
-  font-weight: 400;
-  font-size: 2.2rem;
-  color: #000000;
-`;
-
 export const Line = styled.div`
   width: 40.6rem;
   height: 0.2rem;
-  background-color: #000000;
+  background-color: #2e2e2e;
 `;
 
 export const WrapperSignUpTexts = styled.div`
@@ -63,7 +47,7 @@ export const WrapperSignUpTexts = styled.div`
 
 export const SignUpText = styled.span<{ color?: string; clickable?: boolean }>`
   color: ${(props) => props.color ?? '#2e2e2e'};
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-family: ${sourceSans.style.fontFamily}, sans-serif;
   font-weight: 600;
 
@@ -82,12 +66,6 @@ export const WrapperEmailInput = styled.div`
   padding-top: 1.4rem;
 `;
 
-export const TitleInput = styled.span`
-  color: #2e2e2e;
-  font-size: 1.8rem;
-  font-weight: 600;
-`;
-
 export const WrapperPasswordInput = styled.div`
   display: flex;
   flex-direction: column;
@@ -96,16 +74,17 @@ export const WrapperPasswordInput = styled.div`
   padding-top: 2.5rem;
 `;
 
-export const ForgetPasswordText = styled.span`
-  color: #2e2e2e;
+export const ForgetPasswordText = styled.span<{ color?: string }>`
+  color: ${(props) => (props.color ? props.color : '#2e2e2e')};
   font-weight: 700;
   font-size: 1.2rem;
-  cursor: pointer;
+  cursor: ${(props) => props.color && 'pointer'};
 `;
 
 export const ContainerSubmitButton = styled.div`
   display: flex;
   justify-content: center;
+  padding-top: 5rem;
 `;
 
 export const SubmitButton = styled.button`
@@ -118,4 +97,5 @@ export const SubmitButton = styled.button`
   font-weight: 600;
   cursor: pointer;
   filter: drop-shadow(0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.25));
+  border: 0.2rem solid #f4f4f4;
 `;

@@ -1,11 +1,18 @@
 import styled from 'styled-components';
 
+export const GlobalContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+`;
+
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  width: 48rem;
-  height: 72rem;
+  align-items: center;
+  gap: 4rem;
   border-radius: 1.2rem;
   border: 0.25rem solid #fff;
   background: linear-gradient(
@@ -18,52 +25,23 @@ export const Container = styled.div`
   padding: 3.6rem 2rem;
 `;
 
-export const WrapperFirstSection = styled.div`
+export const WrapperTitleTexts = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2.6rem;
-  padding-bottom: 3.6rem;
-`;
-
-export const WrapperFirstSectionTexts = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-
-export const Line = styled.div`
-  width: 38rem;
-  height: 0.2rem;
-  background-color: #2e2e2e;
-`;
-
-export const WrapperAllInputs = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
 `;
 
 export const WrapperEmailInput = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: start;
-  gap: 1.2rem;
+  justify-content: flex-start;
+  gap: 1rem;
+  padding-top: 1.4rem;
 `;
-
-export const WrapperInputTexts = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-`;
-
-export const WrapperPasswordInput = styled(WrapperEmailInput)``;
-export const WrapperRepeatPasswordInput = styled(WrapperEmailInput)``;
 
 export const ContainerSubmitButton = styled.div`
   display: flex;
   justify-content: center;
-  padding-top: 3.9rem;
 `;
 
 export const SubmitButton = styled.button`

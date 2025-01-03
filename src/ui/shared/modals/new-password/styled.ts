@@ -1,13 +1,17 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const GlobalContainer = styled.div`
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+`;
+
+export const Container = styled.div`
   width: 48rem;
-  height: 72rem;
   border-radius: 1.2rem;
-  border: 0.25rem solid #fff;
+  border: 0.2rem solid #fff;
   background: linear-gradient(
     156deg,
     rgba(255, 255, 255, 0.45) 4.76%,
@@ -22,33 +26,28 @@ export const WrapperFirstSection = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2.6rem;
-  padding-bottom: 3.6rem;
+  gap: 1.9rem;
 `;
 
 export const WrapperFirstSectionTexts = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 0.8rem;
 `;
 
 export const Line = styled.div`
   width: 38rem;
-  height: 0.2rem;
+  height: 0.15rem;
   background-color: #2e2e2e;
 `;
 
-export const WrapperAllInputs = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-`;
-
-export const WrapperEmailInput = styled.div`
+export const WrapperPasswordInput = styled.div`
   display: flex;
   flex-direction: column;
   align-items: start;
   gap: 1.2rem;
+  padding-top: 3rem;
 `;
 
 export const WrapperInputTexts = styled.div`
@@ -57,13 +56,21 @@ export const WrapperInputTexts = styled.div`
   align-items: start;
 `;
 
-export const WrapperPasswordInput = styled(WrapperEmailInput)``;
-export const WrapperRepeatPasswordInput = styled(WrapperEmailInput)``;
+export const WrapperRepeatPasswordInput = styled(WrapperPasswordInput)`
+  padding-top: 2.5rem;
+`;
+
+export const ContainerPasswordTags = styled.div`
+  display: grid;
+  display: grid;
+  grid-template-columns: repeat(3, 14.8rem);
+  grid-template-rows: repeat(2, 2rem);
+`;
 
 export const ContainerSubmitButton = styled.div`
   display: flex;
   justify-content: center;
-  padding-top: 3.9rem;
+  padding-top: 4.5rem;
 `;
 
 export const SubmitButton = styled.button`

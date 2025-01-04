@@ -66,22 +66,3 @@ export const ContainerPasswordTags = styled.div`
   grid-template-columns: repeat(3, 14.8rem);
   grid-template-rows: repeat(2, 2rem);
 `;
-
-export const ContainerSubmitButton = styled.div`
-  display: flex;
-  justify-content: center;
-  padding-top: 4.5rem;
-`;
-
-export const SubmitButton = styled.button`
-  width: 16rem;
-  height: 5.5rem;
-  background-color: #e9c46a;
-  border-radius: 1rem;
-  color: #2e2e2e;
-  font-size: 2rem;
-  font-weight: 600;
-  cursor: pointer;
-  filter: drop-shadow(0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.25));
-  border: 0.2rem solid #f4f4f4;
-`;

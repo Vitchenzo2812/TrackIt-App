@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { CSSProperties, JSX } from 'react';
 import * as S from './styled';
+import { sourceSans } from '@/styles/global';
 
 interface Props {
   as?: keyof JSX.IntrinsicElements;
@@ -11,6 +12,7 @@ interface Props {
   lineHeight?: number;
   children: any;
   textAlign?: CSSProperties['textAlign'];
+  styles?: CSSProperties;
 }
 
 const Typography = ({
@@ -18,10 +20,11 @@ const Typography = ({
   size,
   weight = 400,
   color = '#000',
-  fontFamily,
+  fontFamily = sourceSans.style.fontFamily,
   lineHeight,
   children,
   textAlign,
+  styles,
 }: Props) => {
   return (
     <S.Typography
@@ -32,6 +35,7 @@ const Typography = ({
       lineHeight={lineHeight}
       color={color}
       textAlign={textAlign}
+      style={styles}
     >
       {children}
     </S.Typography>

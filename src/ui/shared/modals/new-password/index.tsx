@@ -6,6 +6,7 @@ import PasswordIcon from '@/ui/icons/password';
 import ClosedEyeIcon from '@/ui/icons/closed-eye';
 import PasswordTags from '../../molecules/password-tags';
 import { useModals } from '../../context/modals/context';
+import SubmitButton from '../components/submit-button';
 
 const NewPasswordModal = () => {
   const { closeAll } = useModals((state) => state);
@@ -47,7 +48,7 @@ const NewPasswordModal = () => {
         <S.WrapperPasswordInput>
           <S.WrapperInputTexts>
             <Typography
-              size={1.8}
+              size={2}
               weight={600}
               fontFamily={sourceSans.style.fontFamily}
               color="#2e2e2e"
@@ -55,10 +56,10 @@ const NewPasswordModal = () => {
               Escolha uma nova senha
             </Typography>
             <Typography
-              size={1.2}
-              weight={600}
+              size={1.5}
+              weight={500}
               fontFamily={sourceSans.style.fontFamily}
-              color="#2e2e2e"
+              color="#848484"
             >
               Algo que só você vai lembrar, mas que seja forte.
             </Typography>
@@ -76,7 +77,7 @@ const NewPasswordModal = () => {
         <S.WrapperRepeatPasswordInput>
           <S.WrapperInputTexts>
             <Typography
-              size={1.8}
+              size={2}
               weight={600}
               fontFamily={sourceSans.style.fontFamily}
               color="#2e2e2e"
@@ -84,10 +85,10 @@ const NewPasswordModal = () => {
               Confirme a nova senha
             </Typography>
             <Typography
-              size={1.2}
-              weight={600}
+              size={1.5}
+              weight={500}
               fontFamily={sourceSans.style.fontFamily}
-              color="#2e2e2e"
+              color="#848484"
             >
               Só para garantir que está tudo certo.
             </Typography>
@@ -100,9 +101,12 @@ const NewPasswordModal = () => {
           />
         </S.WrapperRepeatPasswordInput>
 
-        <S.ContainerSubmitButton>
-          <S.SubmitButton>Alterar senha</S.SubmitButton>
-        </S.ContainerSubmitButton>
+        <SubmitButton
+          label="Alterar senha"
+          buttonColor="#e9c46a"
+          onClick={() => {}}
+          styles={{ paddingTop: '4.5rem' }}
+        />
       </S.Container>
     </S.GlobalContainer>
   );

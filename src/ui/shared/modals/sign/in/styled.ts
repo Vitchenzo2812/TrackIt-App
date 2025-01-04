@@ -47,7 +47,7 @@ export const WrapperSignUpTexts = styled.div`
 
 export const SignUpText = styled.span<{ color?: string; clickable?: boolean }>`
   color: ${(props) => props.color ?? '#2e2e2e'};
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-family: ${sourceSans.style.fontFamily}, sans-serif;
   font-weight: 600;
 
@@ -77,7 +77,7 @@ export const WrapperPasswordInput = styled.div`
 export const ForgetPasswordText = styled.span<{ color?: string }>`
   color: ${(props) => (props.color ? props.color : '#2e2e2e')};
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   cursor: ${(props) => props.color && 'pointer'};
 `;
 

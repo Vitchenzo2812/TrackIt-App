@@ -5,6 +5,7 @@ import PasswordIcon from '@/ui/icons/password';
 import ClosedEyeIcon from '@/ui/icons/closed-eye';
 import Typography from '@/ui/shared/atoms/typography';
 import { poppins, sourceSans } from '@/styles/global';
+import SubmitButton from '../../components/submit-button';
 
 const SignIn = () => {
   return (
@@ -47,14 +48,14 @@ const SignIn = () => {
       </S.WrapperSignUpTexts>
 
       <S.WrapperEmailInput>
-        <Typography size={1.8} color="#2e2e2e" weight={600}>
+        <Typography size={2} color="#2e2e2e" weight={600}>
           Email
         </Typography>
         <ModalInput placeholder="endereço de email" leftIcon={<EmailIcon />} />
       </S.WrapperEmailInput>
 
       <S.WrapperPasswordInput>
-        <Typography size={1.8} color="#2e2e2e" weight={600}>
+        <Typography size={2} color="#2e2e2e" weight={600}>
           Senha
         </Typography>
         <ModalInput
@@ -71,9 +72,12 @@ const SignIn = () => {
         </S.ForgetPasswordText>
       </S.WrapperPasswordInput>
 
-      <S.ContainerSubmitButton>
-        <S.SubmitButton>Entrar</S.SubmitButton>
-      </S.ContainerSubmitButton>
+      <SubmitButton
+        label="Entrar"
+        buttonColor="#e9c46a"
+        styles={{ paddingTop: '2.5rem' }}
+        onClick={() => {}}
+      />
     </S.Container>
   );
 };

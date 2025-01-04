@@ -23,7 +23,7 @@ export const WrapperFirstSection = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 2.6rem;
-  padding-bottom: 3.6rem;
+  padding-bottom: 3rem;
 `;
 
 export const WrapperFirstSectionTexts = styled.div`
@@ -59,22 +59,3 @@ export const WrapperInputTexts = styled.div`
 
 export const WrapperPasswordInput = styled(WrapperEmailInput)``;
 export const WrapperRepeatPasswordInput = styled(WrapperEmailInput)``;
-
-export const ContainerSubmitButton = styled.div`
-  display: flex;
-  justify-content: center;
-  padding-top: 3.9rem;
-`;
-
-export const SubmitButton = styled.button`
-  width: 16rem;
-  height: 5.5rem;
-  background-color: #e9c46a;
-  border-radius: 1rem;
-  color: #2e2e2e;
-  font-size: 2rem;
-  font-weight: 600;
-  cursor: pointer;
-  filter: drop-shadow(0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.25));
-  border: 0.2rem solid #f4f4f4;
-`;

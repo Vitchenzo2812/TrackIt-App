@@ -14,7 +14,7 @@ const PasswordTag = ({ text, isRight }: Props) => {
     <S.Container>
       {isRight ? <RightIcon /> : <WrongIcon />}
       <Typography
-        size={1}
+        size={1.2}
         fontFamily={sourceSans.style.fontFamily}
         color="#2E2E2E"
         weight={400}

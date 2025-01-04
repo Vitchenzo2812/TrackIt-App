@@ -9,10 +9,7 @@ export const GlobalContainer = styled.div`
 `;
 
 export const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4rem;
+  width: 48rem;
   border-radius: 1.2rem;
   border: 0.25rem solid #fff;
   background: linear-gradient(
@@ -31,10 +28,24 @@ export const WrapperTitleTexts = styled.div`
   align-items: center;
 `;
 
-export const WrapperEmailInput = styled.div`
+export const WrapperInputs = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  gap: 5rem;
+  padding-top: 5rem;
+  padding-bottom: 6.8rem;
+`;
+
+export const ContainerInputWithTitle = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: start;
   gap: 1rem;
-  padding-top: 1.4rem;
+`;
+
+export const WrapperAmountTexts = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 0.5rem;
 `;

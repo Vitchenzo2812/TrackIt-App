@@ -3,11 +3,23 @@ import Typography from '../../atoms/typography';
 import * as S from './styled';
 import ModalInput from '../components/input';
 import EmailIcon from '@/ui/icons/email';
+import SubmitButton from '../components/submit-button';
+import { useModals } from '../../context/modals/context';
 
 const ForgetPasswordModal = () => {
+  const { closeAll } = useModals((state) => state);
+
   return (
-    <S.GlobalContainer>
-      <S.Container>
+    <S.GlobalContainer
+      onClick={() => {
+        closeAll();
+      }}
+    >
+      <S.Container
+        onClick={(evt) => {
+          evt.stopPropagation();
+        }}
+      >
         <S.WrapperTitleTexts>
           <Typography
             size={2.5}
@@ -28,7 +40,12 @@ const ForgetPasswordModal = () => {
         </S.WrapperTitleTexts>
 
         <S.WrapperEmailInput>
-          <Typography size={1.8} color="#2e2e2e" weight={600}>
+          <Typography
+            size={2}
+            color="#2e2e2e"
+            weight={600}
+            fontFamily={sourceSans.style.fontFamily}
+          >
             Insira seu Email
           </Typography>
           <ModalInput
@@ -37,9 +54,11 @@ const ForgetPasswordModal = () => {
           />
         </S.WrapperEmailInput>
 
-        <S.ContainerSubmitButton>
-          <S.SubmitButton>Enviar código</S.SubmitButton>
-        </S.ContainerSubmitButton>
+        <SubmitButton
+          label="Enviar código"
+          buttonColor="#e9c46a"
+          onClick={() => {}}
+        />
       </S.Container>
     </S.GlobalContainer>
   );

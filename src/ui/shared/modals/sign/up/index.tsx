@@ -6,6 +6,7 @@ import EmailIcon from '@/ui/icons/email';
 import PasswordIcon from '@/ui/icons/password';
 import ClosedEyeIcon from '@/ui/icons/closed-eye';
 import PasswordTags from '@/ui/shared/molecules/password-tags';
+import SubmitButton from '../../components/submit-button';
 
 const SignUp = () => {
   return (
@@ -45,7 +46,7 @@ const SignUp = () => {
         <S.WrapperEmailInput>
           <S.WrapperInputTexts>
             <Typography
-              size={1.8}
+              size={2}
               weight={600}
               fontFamily={sourceSans.style.fontFamily}
               color="#2e2e2e"
@@ -53,10 +54,10 @@ const SignUp = () => {
               Qual é seu Email?
             </Typography>
             <Typography
-              size={1.2}
-              weight={600}
+              size={1.5}
+              weight={500}
               fontFamily={sourceSans.style.fontFamily}
-              color="#2e2e2e"
+              color="#848484"
             >
               Apenas para podermos manter contato.
             </Typography>
@@ -71,7 +72,7 @@ const SignUp = () => {
         <S.WrapperPasswordInput>
           <S.WrapperInputTexts>
             <Typography
-              size={1.8}
+              size={2}
               weight={600}
               fontFamily={sourceSans.style.fontFamily}
               color="#2e2e2e"
@@ -79,10 +80,10 @@ const SignUp = () => {
               Crie sua senha
             </Typography>
             <Typography
-              size={1.2}
-              weight={600}
+              size={1.5}
+              weight={500}
               fontFamily={sourceSans.style.fontFamily}
-              color="#2e2e2e"
+              color="#848484"
             >
               Escolha uma senha que só você saiba.
             </Typography>
@@ -100,7 +101,7 @@ const SignUp = () => {
         <S.WrapperRepeatPasswordInput>
           <S.WrapperInputTexts>
             <Typography
-              size={1.8}
+              size={2}
               weight={600}
               fontFamily={sourceSans.style.fontFamily}
               color="#2e2e2e"
@@ -108,10 +109,10 @@ const SignUp = () => {
               Repita a senha
             </Typography>
             <Typography
-              size={1.2}
-              weight={600}
+              size={1.5}
+              weight={500}
               fontFamily={sourceSans.style.fontFamily}
-              color="#2e2e2e"
+              color="#848484"
             >
               Foi mal fazer você escrever novamente, é só pra ter certeza :)
             </Typography>
@@ -125,9 +126,12 @@ const SignUp = () => {
         </S.WrapperRepeatPasswordInput>
       </S.WrapperAllInputs>
 
-      <S.ContainerSubmitButton>
-        <S.SubmitButton>Cadastrar</S.SubmitButton>
-      </S.ContainerSubmitButton>
+      <SubmitButton
+        label="Cadastrar"
+        buttonColor="#e9c46a"
+        onClick={() => {}}
+        styles={{ paddingTop: '1.9rem' }}
+      />
     </S.Container>
   );
 };

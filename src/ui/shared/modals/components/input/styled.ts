@@ -15,13 +15,21 @@ export const Container = styled.div`
   gap: 0.9rem;
 `;
 
+export const AmountLabel = styled.span`
+  color: #2e2e2e;
+  font-size: 1.4rem;
+  font-family: ${sourceSans.style.fontFamily};
+  font-weight: 600;
+`;
+
 export const Input = styled.input`
   width: 100%;
   background-color: transparent;
+  font-size: 1.6rem;
 
   &::placeholder {
     color: #797979;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     font-weight: 600;
     font-family: ${sourceSans.style.fontFamily}, sans-serif;
   }

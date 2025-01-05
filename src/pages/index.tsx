@@ -1,19 +1,7 @@
-import { useModals } from '@/ui/shared/context/modals/context';
+import InitialPage from '@/ui/shared/templates/initial-page';
 
 const App = () => {
-  const { open, modalId } = useModals((state) => state);
-
-  return (
-    !modalId && (
-      <button
-        onClick={() => {
-          open('forget-password');
-        }}
-      >
-        Abrir modal
-      </button>
-    )
-  );
+  return <InitialPage />;
 };
 
 export default App;

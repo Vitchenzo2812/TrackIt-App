@@ -1,8 +1,11 @@
 import { poppins } from '@/styles/global';
 import Typography from '../../atoms/typography';
 import * as S from './styled';
+import { useModals } from '../../context/modals/context';
 
 const InitialPage = () => {
+  const { open } = useModals((state) => state);
+
   return (
     <S.Container>
       <S.WrapperTitleSection>
@@ -20,8 +23,20 @@ const InitialPage = () => {
       </S.WrapperTitleSection>
 
       <S.WrapperButtons>
-        <S.SignInButton>Entrar</S.SignInButton>
-        <S.SignUpButton>Cadastrar</S.SignUpButton>
+        <S.SignInButton
+          onClick={() => {
+            open('sign', { type: 'sign-in' });
+          }}
+        >
+          Entrar
+        </S.SignInButton>
+        <S.SignUpButton
+          onClick={() => {
+            open('sign', { type: 'sign-up' });
+          }}
+        >
+          Cadastrar
+        </S.SignUpButton>
       </S.WrapperButtons>
     </S.Container>
   );

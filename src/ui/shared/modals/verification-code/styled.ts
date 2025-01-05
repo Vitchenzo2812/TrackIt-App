@@ -8,6 +8,8 @@ export const GlobalContainer = styled.div`
   align-items: center;
   width: 100vw;
   height: 100vh;
+  position: absolute;
+  background-color: transparent;
 `;
 
 export const Container = styled.div<{ variant?: VerificationCodeType }>`

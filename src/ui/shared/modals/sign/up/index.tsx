@@ -128,7 +128,6 @@ const SignUp = () => {
 
       <SubmitButton
         label="Cadastrar"
-        buttonColor="#e9c46a"
         onClick={() => {}}
         styles={{ paddingTop: '1.9rem' }}
       />

@@ -5,18 +5,15 @@ export const ContainerSubmitButton = styled.div`
   justify-content: center;
 `;
 
-export const SubmitButton = styled.button<{
-  buttonColor: string;
-  labelColor: string;
-}>`
+export const SubmitButton = styled.button`
   width: 16rem;
   height: 5.5rem;
-  background-color: ${(props) => props.buttonColor};
-  border-radius: 1rem;
-  color: ${(props) => props.labelColor};
+  border-radius: 0.8rem;
+  background: #f4f4f4;
+  box-shadow:
+    -2rem -2rem 6rem 0rem #f4f4f4,
+    2rem 2rem 6rem 0.2rem #bebebe;
   font-size: 2rem;
   font-weight: 600;
   cursor: pointer;
-  filter: drop-shadow(0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.25));
-  border: 0.2rem solid #f4f4f4;
 `;

@@ -28,10 +28,11 @@ export const WrapperButtons = styled.div`
 export const SignInButton = styled.button`
   width: 23rem;
   height: 7.5rem;
-  border-radius: 3rem;
-  border: 0.1rem solid #f4f4f4;
-  background: #36ba98;
-  filter: drop-shadow(0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.25));
+  border-radius: 0.8rem;
+  background: #f4f4f4;
+  box-shadow:
+    -2rem -2rem 6rem 0rem #f4f4f4,
+    2rem 2rem 6rem 0.2rem #bebebe;
   color: #2e2e2e;
   font-size: 3.5rem;
   font-weight: 600;
@@ -40,6 +41,7 @@ export const SignInButton = styled.button`
 `;
 
 export const SignUpButton = styled.button`
+  background-color: transparent;
   color: #2e2e2e;
   font-family: ${sourceSans.style.fontFamily}, sans-serif;
   font-size: 3rem;

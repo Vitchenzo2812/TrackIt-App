@@ -11,14 +11,14 @@ const Sign = ({ type }: SignProps) => {
   const { closeAll } = useModals((state) => state);
 
   return (
-    <S.Container
+    <S.GlobalContainer
       onClick={() => {
         closeAll();
       }}
     >
       {type === 'sign-in' && <SignIn />}
       {type === 'sign-up' && <SignUp />}
-    </S.Container>
+    </S.GlobalContainer>
   );
 };
 

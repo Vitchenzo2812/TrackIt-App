@@ -54,11 +54,7 @@ const ForgetPasswordModal = () => {
           />
         </S.WrapperEmailInput>
 
-        <SubmitButton
-          label="Enviar código"
-          buttonColor="#e9c46a"
-          onClick={() => {}}
-        />
+        <SubmitButton label="Enviar código" onClick={() => {}} />
       </S.Container>
     </S.GlobalContainer>
   );

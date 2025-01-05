@@ -74,7 +74,6 @@ const SignIn = () => {
 
       <SubmitButton
         label="Entrar"
-        buttonColor="#e9c46a"
         styles={{ paddingTop: '2.5rem' }}
         onClick={() => {}}
       />

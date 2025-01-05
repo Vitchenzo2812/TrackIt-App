@@ -103,7 +103,6 @@ const NewPasswordModal = () => {
 
         <SubmitButton
           label="Alterar senha"
-          buttonColor="#e9c46a"
           onClick={() => {}}
           styles={{ paddingTop: '4.5rem' }}
         />

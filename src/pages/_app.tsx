@@ -6,8 +6,8 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <GlobalStyles />
-      <Modals />
       <div style={{ position: 'relative' }}>
+        <Modals />
         <Component {...pageProps} />
       </div>
     </>

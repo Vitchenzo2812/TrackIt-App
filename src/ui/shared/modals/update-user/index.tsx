@@ -80,12 +80,7 @@ const UpdateUserModal = () => {
           </S.ContainerInputWithTitle>
         </S.WrapperInputs>
 
-        <SubmitButton
-          label="Atualizar"
-          buttonColor="#36BA98"
-          labelColor="#f4f4f4"
-          onClick={() => {}}
-        />
+        <SubmitButton label="Atualizar" onClick={() => {}} />
       </S.Container>
     </S.GlobalContainer>
   );

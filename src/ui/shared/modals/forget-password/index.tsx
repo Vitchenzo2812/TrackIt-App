@@ -1,5 +1,5 @@
 import { poppins, sourceSans } from '@/styles/global';
-import Typography from '../../atoms/typography';
+import Typography from '../../components/atoms/typography';
 import * as S from './styled';
 import ModalInput from '../components/input';
 import EmailIcon from '@/ui/icons/email';

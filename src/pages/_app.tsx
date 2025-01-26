@@ -1,6 +1,10 @@
 import { GlobalStyles } from '@/styles/global';
-import Modals from '@/ui/shared/context/modals';
 import type { AppProps } from 'next/app';
+import dynamic from 'next/dynamic';
+
+const Modals = dynamic(async () => import('@/ui/shared/context/modals/index'), {
+  ssr: false,
+});
 
 export default function App({ Component, pageProps }: AppProps) {
   return (

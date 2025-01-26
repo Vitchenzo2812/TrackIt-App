@@ -13,6 +13,8 @@ interface Props {
   children: any;
   textAlign?: CSSProperties['textAlign'];
   styles?: CSSProperties;
+  onClick?: () => void;
+  maxWidth?: string;
 }
 
 const Typography = ({
@@ -25,6 +27,8 @@ const Typography = ({
   children,
   textAlign,
   styles,
+  onClick,
+  maxWidth,
 }: Props) => {
   return (
     <S.Typography
@@ -36,6 +40,9 @@ const Typography = ({
       color={color}
       textAlign={textAlign}
       style={styles}
+      onClick={onClick}
+      isclickable={`${!!onClick}`}
+      maxwidth={maxWidth}
     >
       {children}
     </S.Typography>

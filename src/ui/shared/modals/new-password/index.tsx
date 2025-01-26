@@ -1,10 +1,10 @@
 import { poppins, sourceSans } from '@/styles/global';
-import Typography from '../../atoms/typography';
+import Typography from '../../components/atoms/typography';
 import * as S from './styled';
 import ModalInput from '../components/input';
 import PasswordIcon from '@/ui/icons/password';
 import ClosedEyeIcon from '@/ui/icons/closed-eye';
-import PasswordTags from '../../molecules/password-tags';
+import PasswordTags from '../../components/molecules/password-tags';
 import { useModals } from '../../context/modals/context';
 import SubmitButton from '../components/submit-button';
 

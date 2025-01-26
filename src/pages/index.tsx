@@ -1,7 +1,7 @@
-import InitialPage from '@/ui/shared/templates/initial-page';
+import HomePage from '@/ui/shared/components/templates/home-page';
 
 const App = () => {
-  return <InitialPage />;
+  return <HomePage />;
 };
 
 export default App;

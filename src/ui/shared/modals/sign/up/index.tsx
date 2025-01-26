@@ -1,11 +1,11 @@
-import Typography from '@/ui/shared/atoms/typography';
+import Typography from '@/ui/shared/components/atoms/typography';
 import * as S from './styled';
 import { poppins, sourceSans } from '@/styles/global';
 import ModalInput from '../../components/input';
 import EmailIcon from '@/ui/icons/email';
 import PasswordIcon from '@/ui/icons/password';
 import ClosedEyeIcon from '@/ui/icons/closed-eye';
-import PasswordTags from '@/ui/shared/molecules/password-tags';
+import PasswordTags from '@/ui/shared/components/molecules/password-tags';
 import SubmitButton from '../../components/submit-button';
 
 const SignUp = () => {

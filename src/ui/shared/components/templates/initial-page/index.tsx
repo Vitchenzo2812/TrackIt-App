@@ -1,7 +1,7 @@
 import { poppins } from '@/styles/global';
 import Typography from '../../atoms/typography';
 import * as S from './styled';
-import { useModals } from '../../context/modals/context';
+import { useModals } from '../../../context/modals/context';
 
 const InitialPage = () => {
   const { open } = useModals((state) => state);

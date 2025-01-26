@@ -3,7 +3,7 @@ import ModalInput from '../../components/input';
 import * as S from './styled';
 import PasswordIcon from '@/ui/icons/password';
 import ClosedEyeIcon from '@/ui/icons/closed-eye';
-import Typography from '@/ui/shared/atoms/typography';
+import Typography from '@/ui/shared/components/atoms/typography';
 import { poppins, sourceSans } from '@/styles/global';
 import SubmitButton from '../../components/submit-button';
 
